@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="style.css">
+<script src="funciones.js"></script>
+<form class="form">
+    <h2>Calculadora de coste por kilómetro</h2>
+    <p type="Precio de adquisición del vehículo:"><input type="number" min="1" placeholder="17.000 €" id="precioVehiculo"></input></p>
+    <p type="Precio de adquisición de la licencia:"><input type="number" min="1" id="precioLicencia" placeholder="120.000€"></input></p>
+    <p type="Precio anual del seguro:"><input type="number" min="1" id="precioSeguro" placeholder="2.000€"></input></p>
+    <p type="Tipo de combustible:">
+        <select id="tipoCombustible" name="transporte" >
+
+            <option value="1" >Híbrido</option>
+            
+            <option value="2">Gasolina</option>
+            
+            <option value="3">Disel</option>
+
+            <option value="4">GLP</option>
+            
+            </select>
+    </p>
+    <p type="Consumo del coche:"><input type="number" min="1" id="consumoDeCombustible" placeholder="6.5L/100km"></input></p>
+    <a href="CostView.html"><button  id="submit">Calcular Precio</button></a>
+    <div>
+      <span class="fa fa-phone"></span>+34 ...
+      <span class="fa fa-envelope-o"></span> atencionalcliente@cabertytaxi.es
+    </div>
+  </form>
