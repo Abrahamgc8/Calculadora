@@ -1,35 +1,52 @@
-kilometrosDiarios = 300;
-var  precioVehiculo;
-var precioLicencia;
-var value;
-var  precioSeguro;
-var  consumo;
-diasTrabajados = 220;
-kilometrosAnuales = kilometrosDiarios * diasTrabajados;
+var tipoCombustible;
+var precioLicencia; 
+var precioVehiculo; 
+var precioSeguro;
+var consumo;
+
+
+let kilometrosDiarios = 300;
+let diasTrabajados = 220;
+let kilometrosAnuales = kilometrosDiarios * diasTrabajados;
 //Extraer información calculadora
-document.getElementsByTagName('button').onclick = function() {
-    value = document.getElementById("tipoCombustible").selectedOptions[0].value;
-    precioLicencia = document.getElementById('precioLicencia').form;
-    precioVehiculo = document.getElementById('precioVehiculo').form;
-    precioSeguro = document.getElementById('precioSeguro').form;
-    consumo = document.getElementById('consumoDeCombustible').form;
-    
+
+function extraerDatos(){
+    tipoCombustible = document.getElementById("tipoCombustible").selectedOptions[0].value;
+    precioLicencia = document.getElementById('precioLicencia').value;
+    precioVehiculo = document.getElementById('precioVehiculo').value;
+    precioSeguro = document.getElementById('precioSeguro').value;
+   consumo = document.getElementById('consumoDeCombustible').value;
+   console.log(tipoCombustible);
+console.log(precioLicencia);
+procesarDatos()
 }
+
+
+
+
+
+
+
+function procesarDatos() {
+    
 
 //Función cálculo precio por kilómetro derivado Adquisición vehículo 
 let tiempoAmortización = 8;
 let kilometrosTotalesVehiculo = kilometrosAnuales * tiempoAmortización;
 let precioPorKilometroAdquisicionVehiculo = precioVehiculo / kilometrosTotalesVehiculo;
 
+
 //Función cálculo por averías
 let costePorAverias = precioVehiculo * 0.20;
 let costePorKilometrosAverias = costePorAverias / kilometrosTotalesVehiculo;
+
 
 //Función cálculo precio por kilómetro derivado Adquisición licencia
 let tiempoAmortizacionLicencia = 20;
 let precioPorKilometroLicencia = precioLicencia / (kilometrosAnuales*tiempoAmortizacionLicencia)
 //Función cálculo precio por kilómetro derivado Seguro anual
 let precioKilometroSeguro = precioSeguro / kilometrosAnuales;
+
 
 //Función cálculo precio por kilómetro derivado combustible
 
@@ -39,15 +56,15 @@ let precioKilometroSeguro = precioSeguro / kilometrosAnuales;
 
 //Selección tipo de combustible
 let precioDiesel = 1;
-let precioGasolina = 1;
-if(value == 'Híbrido' ){
+let precioGasolina = 1.60;
+if(tipoCombustible == 'Híbrido' ){
 
     
     precioPorKilometroCombustible = precioGasolina * consumo / 100 ;
 
 }
 
-else if (value == 'Gasolina'){
+else if (tipoCombustible == 'Gasolina'){
 
     
     precioPorKilometroCombustible = precioGasolina * consumo / 100 ;
@@ -62,5 +79,6 @@ else {
 }
 
 //Precio total por kilómetro 
-precioTotal = precioPorKilometroAdquisicionVehiculo + costePorKilometrosAverias + precioKilometroSeguro + precioPorKilometroCombustible;
+precioTotal = precioPorKilometroAdquisicionVehiculo + precioPorKilometroLicencia + costePorKilometrosAverias + precioKilometroSeguro + precioPorKilometroCombustible;
 console.log(precioTotal);
+}
