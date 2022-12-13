@@ -9,7 +9,7 @@
 
 </head>
 <body>
-  <form class="form">
+  <form class="form" >
     <h2>Calculadora de coste por kilómetro</h2>
     <p type="Precio de adquisición del vehículo:"><input type="number" min="1" placeholder="17.000 €" id="precioVehiculo"></input></p>
     <p type="Precio de adquisición de la licencia:"><input type="number" min="1" id="precioLicencia" placeholder="120.000€"></input></p>
@@ -28,13 +28,11 @@
             </select>
     </p>
     <p type="Consumo del coche:"><input type="number" min="1" id="consumoDeCombustible" placeholder="6.5L/100km"></input></p>
-    
-    <!-- <div>
-      <span class="fa fa-phone"></span>+34 ...
-      <span class="fa fa-envelope-o"></span> atencionalcliente@cabertytaxi.es
-    </div -->
-  </form>
-  <button onclick="extraerDatos()">Calcular Precio</button>
+      <button  type="button" onclick="extraerDatos()";  >Calcular Precio</button>
+    <p id="precioTotal"></p>
+    </form>
+  
+  
   <script src="funciones.js"></script> 
 </body>
 </html>

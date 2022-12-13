@@ -99,7 +99,7 @@ span {
   margin: 0 5px 0 15px;
 }
 
-@media (max-width: 980px) and (min-width:390px) {
+@media (max-width: 980px) and (min-width: 390px) {
   .form {
     width: 70%;
     height: 720px;
@@ -155,7 +155,7 @@ span {
   }
 }
 
-@media (max-width: 390px  ) {
+@media (max-width: 390px) {
   .form {
     width: 90%;
     height: 1046px;
@@ -169,5 +169,68 @@ span {
     font-family: "Montserrat", sans-serif;
     position: relative;
   }
+}
 
+@media screen and (max-width: 974px), screen and (max-height: 1088px) {
+  .form {
+    width: 90%;
+    height: 790px;
+    background: #e6e6e6;
+    border-radius: 62px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(40vh - 324px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+  }
+}
+
+
+@media screen and (max-width: 380px), screen and (max-height: 700px) {
+  .form {
+    width: 90%;
+    height: 693px;
+    background: #e6e6e6;
+    border-radius: 62px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(50vh - 324px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 414px), screen and (max-height: 907px) {
+  .form {
+    width: 90%;
+    height: 1000px;
+    background: #e6e6e6;
+    border-radius: 62px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(48vh - 324px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+  }
+}
+  @media screen and (width: 375px), screen and (height: 667px) {
+    .form {
+      width: 90%;
+      height: 1000px;
+      background: #e6e6e6;
+      border-radius: 62px;
+      box-shadow: 0 0 40px -10px #000;
+      margin: calc(62vh - 324px) auto;
+      padding: 20px 30px;
+      max-width: calc(100vw - 40px);
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+      position: relative;
+    }
 }

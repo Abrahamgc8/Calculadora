@@ -80,5 +80,7 @@ else {
 
 //Precio total por kilómetro 
 precioTotal = precioPorKilometroAdquisicionVehiculo + precioPorKilometroLicencia + costePorKilometrosAverias + precioKilometroSeguro + precioPorKilometroCombustible;
+var precioTotalFixed = precioTotal.toFixed(2);
 console.log(precioTotal);
+document.getElementById("precioTotal").innerHTML=`Tu coste es de: ${precioTotalFixed} €/km` 
 }
