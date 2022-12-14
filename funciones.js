@@ -83,4 +83,6 @@ precioTotal = precioPorKilometroAdquisicionVehiculo + precioPorKilometroLicencia
 var precioTotalFixed = precioTotal.toFixed(2);
 console.log(precioTotal);
 document.getElementById("precioTotal").innerHTML=`Tu coste es de: ${precioTotalFixed} €/km` 
+let urlDestino = 'CostView.html?precio=' + precioTotalFixed;
+location.href = urlDestino;
 }
