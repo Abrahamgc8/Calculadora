@@ -17,5 +17,25 @@ html, body{
   border-radius: 10px;
 }
 
+.p {
+  font-size: large;
+  font-family:"Montserrat", sans-serif;
+}
+
+button {
+  float: right;
+  padding: 8px 12px;
+  margin: 8px 0 0;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #b47320;
+  background: 0;
+  color: #b47320;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+button:hover {
+  background: #b47320;
+  color: white;}
+
 
 
